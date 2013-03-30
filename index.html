@@ -9,11 +9,12 @@
   <h2>Links</h2>
   <ul id="social"></ul>
 
-
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script>
 
-          function dataHandler(info){
-
+    (function($){
+      
+      $.getJSON('data.json', function(info){
             var output = "";
 
             info.ContactInfo.social.forEach(function(social){
@@ -22,18 +23,23 @@
                   output  += '<li>' +   
                         '<a href=" ' + social[key] +  ' ">' + key + '</a>' + '</li>';
                 }
+                document.querySelector('#social').innerHTML = output;
               }
 
             });
+      });
 
-            document.querySelector('#social').innerHTML = output;
+    })(jQuery);
+     
 
-          }
+
+
+
+          
 
 
   </script>
 
-  <script src="http://0.0.0.0/javaScript/JS-JSON/data.json"></script>
 
 </body>
 </html>

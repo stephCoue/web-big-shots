@@ -1,4 +1,4 @@
-dataHandler({
+{
     "Titre" : "Developpeur Web Junior",
     "Description" : "Etudiant à l'IPST CNAM Toulouse, valide son année par un stage…",
 
@@ -28,4 +28,4 @@ dataHandler({
 
     "version" : "0.0.2"
 
-}); //  JSONP  => a function call with our json passing as parameter   
+}  
