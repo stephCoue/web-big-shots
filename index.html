@@ -10,52 +10,44 @@
   <ul id="social"></ul>
 
   <script>
-      var info = {
-              "Titre" : "Developpeur Web Junior",
-              "Description" : "Etudiant à l'IPST CNAM Toulouse, valide son année par un stage…",
-  
-              "Objectif" : {
-                "Stage" : {
-                  "début": "20 mai 2013",
-                  "fin" : "20 aout 2013",
-                  "durée" : "4 mois"
-                  }, 
-                "Remarque" : "acquérir et developper les meilleures méthodes actuelles en JS…"
-              },
 
-              "ContactInfo" : {
-                "nom" : "COUÉ",
-                "prénon" : "Stephane",
-                "age" : 33,
-                "tel" : "0672945692",
-                "mail" : "steph.coue@gmail.com",
-                "adresse" : "Tournefeuille",
-                "social" : [
-                  { "twitter" : "http://twitter.com/stephCoue" },
-                  { "github" : "https://github.com/stephCoue" },
-                  { "viadeo" : "http://fr.viadeo.com/fr/profile/stephane.coue2" },
-                  { "g+" : "https://plus.google.com/100358654321848790843/"}
-                ]
-              },
+            var request;
 
-              "version" : "0.0.2"
+            if(window.XMLHttpRequest){
+              request = new XMLHttpRequest();
+            }else{
+              console.log("%c\t\tYour Browser SUCKS!!", "color: darkred; font-size: 2em;");
+              request = new ActiveXObject("Microsoft.XMLHTTP");
+            }
 
+            request.open('GET', 'data.json');
+
+            request.onreadystatechange = function(){
+                if( request.status === 200 && request.readyState === 4){
+                  console.dir(request);
+                  
+                  var info = JSON.parse(request.responseText);
+
+
+                  var output = "";
+
+                  info.ContactInfo.social.forEach(function(social){
+                    for( var key in social ) {
+                      if(social.hasOwnProperty(key)){
+                        output  += '<li>' +   
+                              '<a href=" ' + social[key] +  ' ">' + key + '</a>' + '</li>';
+                      }
+                    }
+
+                  });
+                  
+                  document.querySelector('#social').innerHTML = output;
+
+                }
             };
 
-
-            var output = "";
-
-            info.ContactInfo.social.forEach(function(social){
-              for( var key in social ) {
-                if(social.hasOwnProperty(key)){
-                  output  += '<li>' +   
-                        '<a href=" ' + social[key] +  ' ">' + key + '</a>' + '</li>';
-                }
-              }
-
-            });
-            
-            document.querySelector('#social').innerHTML = output;
+            request.send();
+           
 
 
   </script>
