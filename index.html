@@ -9,48 +9,31 @@
   <h2>Links</h2>
   <ul id="social"></ul>
 
+
   <script>
 
-            var request;
+          function dataHandler(info){
 
-            if(window.XMLHttpRequest){
-              request = new XMLHttpRequest();
-            }else{
-              console.log("%c\t\tYour Browser SUCKS!!", "color: darkred; font-size: 2em;");
-              request = new ActiveXObject("Microsoft.XMLHTTP");
-            }
+            var output = "";
 
-            request.open('GET', 'data.json');
-
-            request.onreadystatechange = function(){
-                if( request.status === 200 && request.readyState === 4){
-                  console.dir(request);
-                  
-                  var info = JSON.parse(request.responseText);
-
-
-                  var output = "";
-
-                  info.ContactInfo.social.forEach(function(social){
-                    for( var key in social ) {
-                      if(social.hasOwnProperty(key)){
-                        output  += '<li>' +   
-                              '<a href=" ' + social[key] +  ' ">' + key + '</a>' + '</li>';
-                      }
-                    }
-
-                  });
-                  
-                  document.querySelector('#social').innerHTML = output;
-
+            info.ContactInfo.social.forEach(function(social){
+              for( var key in social ) {
+                if(social.hasOwnProperty(key)){
+                  output  += '<li>' +   
+                        '<a href=" ' + social[key] +  ' ">' + key + '</a>' + '</li>';
                 }
-            };
+              }
 
-            request.send();
-           
+            });
+
+            document.querySelector('#social').innerHTML = output;
+
+          }
 
 
   </script>
+
+  <script src="http://0.0.0.0/javaScript/JS-JSON/data.json"></script>
 
 </body>
 </html>
