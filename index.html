@@ -2,44 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JavaScript  & JSON</title>
+  <title>JSON Carousel</title>
 </head>
 <body>
   
-  <h2>Links</h2>
-  <ul id="social"></ul>
-
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script>
-
-    (function($){
-      
-      $.getJSON('data.json', function(info){
-            var output = "";
-
-            info.ContactInfo.social.forEach(function(social){
-              for( var key in social ) {
-                if(social.hasOwnProperty(key)){
-                  output  += '<li>' +   
-                        '<a href=" ' + social[key] +  ' ">' + key + '</a>' + '</li>';
-                }
-                document.querySelector('#social').innerHTML = output;
-              }
-
-            });
-      });
-
-    })(jQuery);
-     
-
-
-
-
-          
-
-
-  </script>
-
-
+  <div id="speakerbox">
+    <div id="carousel"></div>
+  </div>
+  
+  <script src="js/jquery-1.9.1.js"></script>
+  <script src="js/jquery.cycle2js"></script>
+  <script src="js/mustache.js"></script>
 </body>
 </html>
