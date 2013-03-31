@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>JSON Carousel</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
   <div id="speakerbox">
+    <a href="#" id="prev_btn">&laquo;</a><a href="#" id="next_btn">&raquo;</a>
     <div id="carousel"></div>
   </div>
 
@@ -23,7 +25,7 @@
   </script>
   
   <script src="js/jquery-1.9.1.js"></script>
-  <script src="js/jquery.cycle2.js"></script>
+  <script src="js/jquery.cycle.all.js"></script>
   <script src="js/mustache.js"></script>
 
 <script>
@@ -36,6 +38,15 @@
         var html = Mustache.to_html(template, data);
 
         $('#carousel').html(html);
+
+        $('#carousel').cycle({
+              fx: 'fade',
+              pause: 1,
+              next: '#next_btn',
+              prev: '#prev_btn',
+              speed: 500,
+              timeout: 10000
+        });
 
     });
   });
