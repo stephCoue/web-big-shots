@@ -1,0 +1,72 @@
+@import "compass"
+
+// /*****************************************/ 
+// /*********         Variables       ************/ 
+// /*****************************************/ 
+
+// /**
+//  * Generic utility styles etc.
+//  */
+
+// Variables
+
+$fontI : 'Wendy One', sans-serif
+$fontII : 'Libre Baskerville', serif
+
+$bgColor : #eee7d5
+$bgSpeakerBox: #93A1A1
+
+
+
+body
+  background: $bgColor
+  font-family: $fontII
+
+#speakerbox
+  width: 450px
+  height: 300px
+  margin: 110px auto
+  background: $bgSpeakerBox
+  padding: 1px 20px
+  border-radius: 4px
+  overflow: hidden
+  +box-shadow(8px 8px 20px shade($bgSpeakerBox, 40%))
+
+  h3,h4
+    margin: 0
+    padding: 0
+
+  h3
+    // font: font-style font-variant font-weight font-size/line-height font-family
+    font: normal 2em/.9em $fontI
+    color: #115F79
+    +text-shadow(1px 1px 1px shade(#115F79, 20%))
+  h4
+    color: #973C26
+    margin-bottom: 5px
+    line-height: 1.2em
+
+  img
+    float: right
+    margin-left: 10px
+    border-radius: 8px
+    +box-shadow(2px 2px 3px shade($bgSpeakerBox, 30%))
+
+  p
+    color: #1E3A40
+    font-size: .9em
+
+  #next_btn, #prev_btn
+    text-decoration: none
+    padding: 5px 10px
+    color: #F5F5F5
+    background: #d33682
+    border-radius: 6px
+    margin: 10px  10px 10px 0
+    display: inline-block
+    font-size: 1.6em
+
+
+
+
+
