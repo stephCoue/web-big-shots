@@ -18,5 +18,22 @@ To start we need some library dependencies:
 * [circle2](http://www.malsup.com/jquery/cycle2/) a versatile slideshow plugin for jQuery
 * [mustache](https://github.com/janl/mustache.js) a logic-less template syntax.
 
+<pre>
+
+|-- README.md
+|-- data.json
+|-- img
+|   |-- addy-osmani.jpg
+|   |-- john-resig.jpg
+|   |-- lea-verou.jpg
+|   |-- nicolas-gallagher.jpg
+|   `-- paul-irish.jpg
+|-- index.html
+`-- js
+    |-- jquery-1.9.1.js
+    |-- jquery.cycle2.js
+    `-- mustache.js
+
+</pre>
 
 
