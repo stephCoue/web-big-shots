@@ -9,9 +9,39 @@
   <div id="speakerbox">
     <div id="carousel"></div>
   </div>
+
+  <script type="text/template" id="speakersTpl">
+        {{#speakers}}
+            <div class="spearkers">
+                <img src="img/{{ shortname }}.jpg" alt="Photo of {{ name }}">
+                <h3>{{name}}</h3>
+                <h4>{{reknown}}</h4>
+                <p>{{bio}}</p>
+            </div>
+        {{/speakers}}
+
+  </script>
   
   <script src="js/jquery-1.9.1.js"></script>
-  <script src="js/jquery.cycle2js"></script>
+  <script src="js/jquery.cycle2.js"></script>
   <script src="js/mustache.js"></script>
+
+<script>
+  
+  $(function(){
+    console.log('Hi there!!');
+    $.getJSON('data.json', function(data){
+        console.log(data);
+        var template = $('#speakersTpl').html(); // document.getElementById('speakersTpl').innerHTML
+        var html = Mustache.to_html(template, data);
+
+        $('#carousel').html(html);
+
+    });
+  });
+
+
+</script>
+
 </body>
 </html>

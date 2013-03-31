@@ -2,47 +2,33 @@
    "speakers" : [
       {
         "name" : "Addy Osmani",
-        "shortname" : "Addy Osmani",
+        "shortname" : "addy-osmani",
         "reknown" : "Yeoman & DevTools, Creator of TodoMVC, Aura, Basket",
         "bio" : " Passionate about pushing the web forward…"
-      }
+      },
       {
         "name" : "Paul Irish",
-        "shortname" : "Paul Irish",
-        "reknown" : ,
-        "bio" :
-      }
+        "shortname" : "paul-irish",
+        "reknown" : "Modernizr, HTML5 please, jQuery",
+        "bio" : " Chrome dev relations, currently fascinated with front-end tooling and browser devtools. Big fan of rye, research and whimsy…"
+      },
       {
-        "name" : ,
-        "shortname" : ,
-        "reknown" : ,
-        "bio" :
-      }
+        "name" : "Nicolas Gallagher",
+        "shortname" : "nicolas-gallagher",
+        "reknown" : "Normalize, ClearFix",
+        "bio" :"Software Engineer at @twitter. Ex-Londoner. Previous life: Anthropology and Evolution."
+      },
       {
-        "name" : ,
-        "shortname" : ,
-        "reknown" : ,
-        "bio" :
-      }
+        "name" : "Lea Verou",
+        "shortname" : "lea-verou",
+        "reknown" : "prismjs, prefixfree",
+        "bio" : "Developer Relations @W3C (but tweets are personal). Passionate about open web standards, coding, design, UX. Made @prismjs @dabblet @prefixfree. Optimist. INTP."
+      },
       {
-        "name" : ,
-        "shortname" : ,
-        "reknown" : ,
-        "bio" :
+        "name" : "John Resig",
+        "shortname" : "john-resig",
+        "reknown" : "jQuery",
+        "bio" : "American computer programmer and entrepreneur, best known as the creator and lead developer of the jQuery JavaScript library."
       }
-      {
-        "name" : ,
-        "shortname" : ,
-        "reknown" : ,
-        "bio" :
-      }
-      {
-        "name" : ,
-        "shortname" : ,
-        "reknown" : ,
-        "bio" :
-      }
-
-
    ]
 }  
