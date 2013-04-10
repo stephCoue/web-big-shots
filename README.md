@@ -1,4 +1,10 @@
-# JAVASCRIPT & JSON
+
+# Web Big Shots
+
+[A nice slider](http://stephcoue.github.io/web-big-shots/) with some big name.
+
+
+## JAVASCRIPT & JSON
 
 This is a Lynda course on the basic Knowledge I should got for my js journey.
 
@@ -8,7 +14,7 @@ This is a Lynda course on the basic Knowledge I should got for my js journey.
 	4. JAvascript and JSON in Action
 
 
-## JS & JSON in Action
+### JS & JSON in Action
 
 A little project to practice a bit…
 
