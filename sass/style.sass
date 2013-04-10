@@ -1,14 +1,5 @@
 @import "compass"
 
-// /*****************************************/ 
-// /*********         Variables       ************/ 
-// /*****************************************/ 
-
-// /**
-//  * Generic utility styles etc.
-//  */
-
-// Variables
 
 $fontI : 'Wendy One', sans-serif
 $fontII : 'Libre Baskerville', serif
@@ -21,6 +12,10 @@ $bgSpeakerBox: #93A1A1
 body
   background: $bgColor
   font-family: $fontII
+
+::selection
+  color: white
+  background: lighten(#d33682, 20%)
 
 #speakerbox
   width: 450px
@@ -42,7 +37,7 @@ body
     color: #115F79
     +text-shadow(1px 1px 1px shade(#115F79, 20%))
   h4
-    color: #973C26
+    color: shade(#d33682, 15%)
     margin-bottom: 5px
     line-height: 1.2em
 
@@ -56,15 +51,15 @@ body
     color: #1E3A40
     font-size: .9em
 
-  #next_btn, #prev_btn
-    text-decoration: none
-    padding: 5px 10px
-    color: #F5F5F5
-    background: #d33682
-    border-radius: 6px
-    margin: 10px  10px 10px 0
-    display: inline-block
-    font-size: 1.6em
+#next_btn, #prev_btn
+  text-decoration: none
+  padding: 5px 10px
+  color: #F5F5F5
+  background: #d33682
+  border-radius: 6px
+  margin: 10px  10px 10px 0
+  display: inline-block
+  font-size: 1.6em
 
 
 
